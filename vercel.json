@@ -1,7 +1,15 @@
 {
-  "functions": {
-    "api/*.py": {
-      "runtime": "python3.9"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/rss.js",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/api/rss",
+      "dest": "api/rss.js"
+    }
+  ]
 }
